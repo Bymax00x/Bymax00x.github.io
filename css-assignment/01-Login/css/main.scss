@@ -82,6 +82,11 @@ body {
     text-align: center;
     margin: 5rem auto 0 auto;
     padding: $padding;
+
+    &:hover {
+      cursor: pointer;
+      background-color: color(bttn-hover);
+    }
   }
   &__social {
     margin-top: 12%;
@@ -135,6 +140,7 @@ body {
       }
 
       &[type="submit"] {
+        text-transform: uppercase;
         border: none;
         outline: none;
         height: 4rem;

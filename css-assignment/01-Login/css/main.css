@@ -35,14 +35,6 @@ body #bg {
   }
 }
 
-body header a {
-  color: #fff6bb;
-  text-decoration: none;
-  padding: 1rem;
-  display: block;
-  text-transform: uppercase;
-}
-
 .primary {
   color: white;
   padding: 1rem;
@@ -78,6 +70,11 @@ body header a {
   text-align: center;
   margin: 5rem auto 0 auto;
   padding: 1rem;
+}
+
+.primary__bttn:hover {
+  cursor: pointer;
+  background-color: #4ac710;
 }
 
 .primary__social {
@@ -140,6 +137,7 @@ body header a {
 }
 
 .card__textbox input[type="submit"] {
+  text-transform: uppercase;
   border: none;
   outline: none;
   height: 4rem;
