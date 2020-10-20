@@ -1,0 +1,169 @@
+$colors: (
+  primary: #005dff,
+  accent: #fff6bb,
+  primary-dark: darken(#005dff, 40%),
+  bttn-color: lighten(#005dff, 20%),
+  bttn-hover: rgb(74, 199, 16),
+);
+
+$padding: 1rem;
+$borders: 1rem;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$desktop: 800px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+body,
+html {
+  height: 100%;
+  font-size: 10px;
+}
+body {
+  margin: 0;
+
+  #bg {
+    clip-path: polygon(0 0, 100% 0, 100% 81%, 61% 100%, 0 100%);
+    background-color: color(primary);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
+    @include desktop {
+      clip-path: polygon(0 0, 75% 0, 50% 100%, 0% 100%);
+    }
+  }
+  main {
+    @include desktop {
+      display: grid;
+      grid-template-columns: 50% auto;
+      grid-template-areas: "primary  card";
+    }
+  }
+
+  header a {
+    color: color(accent);
+    text-decoration: none;
+    padding: $padding;
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+.primary {
+  color: white;
+  padding: $padding;
+  text-align: center;
+
+  @include desktop {
+    grid-area: primary;
+    text-align: left;
+    margin: 25em auto 4em;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  &__bttn {
+    color: color(primary-dark);
+    text-decoration: none;
+    border-radius: $borders;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: color(accent);
+    display: block;
+    text-align: center;
+    margin: 5rem auto 0 auto;
+    padding: $padding;
+  }
+  &__social {
+    margin-top: 12%;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+.card {
+  background: white;
+  text-align: center;
+  padding: 2rem;
+  margin: 1em auto;
+  border-radius: $borders;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  width: 80%;
+  height: 30rem;
+
+  @include desktop {
+    grid-area: card;
+    height: fit-content;
+    align-self: center;
+    margin: 14em auto 1em;
+    width: 70%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  &__textbox {
+    width: 100%;
+
+    input {
+      width: 100%;
+
+      &[type="text"],
+      &[type="password"] {
+        border: none;
+        margin-bottom: 1rem;
+        border-bottom: 0.1rem solid #ddd;
+        background: transparent;
+        outline: none;
+        height: 3rem;
+        font-size: 1.5rem;
+      }
+
+      &[type="submit"] {
+        border: none;
+        outline: none;
+        height: 4rem;
+        background: color(bttn-color);
+        font-weight: bold;
+        margin-top: 2rem;
+        border-radius: 2rem;
+
+        &:hover {
+          cursor: pointer;
+          background-color: color(bttn-hover);
+        }
+      }
+    }
+  }
+}
+
+.card__bottomtext {
+  margin: 2rem auto;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
