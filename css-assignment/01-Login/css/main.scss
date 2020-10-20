@@ -48,14 +48,6 @@ body {
       grid-template-areas: "primary  card";
     }
   }
-
-  header a {
-    color: color(accent);
-    text-decoration: none;
-    padding: $padding;
-    display: block;
-    text-transform: uppercase;
-  }
 }
 
 .primary {
