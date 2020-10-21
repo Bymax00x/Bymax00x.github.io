@@ -7,6 +7,8 @@ $colors: (
   primary-dark: darken(#005dff, 40%),
   bttn-color: lighten(#005dff, 20%),
   bttn-hover: rgb(74, 199, 16),
+  section-dark: darken(white, 5%),
+  nav-background: #f5f5f5,
 );
 
 $padding: 1rem;
@@ -39,6 +41,7 @@ header {
         margin: $margin;
 
         h1 {
+          color: #397881;
           font-weight: normal;
         }
       }
@@ -102,7 +105,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem;
-  background-color: #f5f5f5;
+  background-color: color(nav-background);
 }
 
 .nav__first {
@@ -122,4 +125,77 @@ nav {
     font-size: 1.5rem;
     margin: 1rem;
   }
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__left {
+  margin: 3rem;
+  background-color: color(nav-background);
+  width: 15%;
+
+  &__first {
+    font-size: 1.2rem;
+    background-color: #2fc1da;
+    padding: $padding;
+    color: color(section-dark);
+  }
+  &__content1 {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: $padding;
+      }
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+  }
+}
+
+.main__left__second {
+  font-size: 1.2rem;
+  background-color: #2fc1da;
+  padding: $padding;
+  color: color(section-dark);
+}
+
+.main__left__content2 {
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: $padding;
+    }
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+}
+.active01 {
+  background-color: white;
+}
+
+.main__middle {
+  background-color: green;
 }
