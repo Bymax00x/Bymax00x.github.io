@@ -1,0 +1,91 @@
+body,
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+header .headings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #7dd9e8;
+}
+
+header .headings__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .headings__left__title {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+header .headings__left__title h1 {
+  font-weight: normal;
+}
+
+header .headings__left__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+  padding: 3rem 1rem 0rem 0rem;
+  height: 2.4rem;
+}
+
+header .headings__left__inputs__text {
+  padding: 0.5rem;
+  background-color: #d4f2f7;
+  border-radius: 2rem;
+}
+
+header .headings__left__inputs [type="text"] {
+  outline: none;
+  border-style: none;
+  font-size: 1rem;
+  border-radius: 2rem;
+  width: 30rem;
+  background-color: #d4f2f7;
+}
+
+header .headings__left__inputs button {
+  border-style: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  width: 6rem;
+  color: white;
+  border-radius: 1rem;
+  margin-left: 0.4rem;
+  padding: 0.8rem;
+  background-color: #264f57;
+}
+
+.headings__user {
+  margin: 3rem;
+}
+
+.headings__user h1 {
+  padding: 0 0rem 0.5rem 5rem;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.headings__user ul {
+  list-style-type: none;
+}
+
+.headings__user a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=main.css.map */

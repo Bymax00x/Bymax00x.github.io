@@ -1,0 +1,99 @@
+$colors: (
+  primary: #7dd9e8,
+  accent: #fff6bb,
+  dark: #264f57,
+  text-primary: #d4f2f7,
+  primary-light: lighten(#7dd9e8, 20%),
+  primary-dark: darken(#005dff, 40%),
+  bttn-color: lighten(#005dff, 20%),
+  bttn-hover: rgb(74, 199, 16),
+);
+
+$padding: 1rem;
+$margin: 1rem;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+body,
+html {
+  font-size: 10px;
+}
+* {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+header {
+  .headings {
+    display: flex;
+    justify-content: space-between;
+    background-color: color(primary);
+
+    &__left {
+      display: flex;
+
+      &__title {
+        font-size: 3rem;
+        margin: $margin;
+
+        h1 {
+          font-weight: normal;
+        }
+      }
+
+      &__inputs {
+        display: flex;
+        margin: $margin;
+        padding: 3rem 1rem 0rem 0rem;
+        height: 2.4rem;
+
+        &__text {
+          padding: 0.5rem;
+          background-color: color(text-primary);
+          border-radius: 2rem;
+        }
+
+        [type="text"] {
+          outline: none;
+          border-style: none;
+          font-size: 1rem;
+          border-radius: 2rem;
+          width: 30rem;
+          background-color: color(text-primary);
+        }
+
+        button {
+          border-style: none;
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          width: 6rem;
+          color: white;
+          border-radius: 1rem;
+          margin-left: 0.4rem;
+          padding: 0.8rem;
+          background-color: color(dark);
+        }
+      }
+    }
+  }
+}
+
+.headings__user {
+  margin: 3rem;
+  h1 {
+    padding: 0 0rem 0.5rem 5rem;
+    font-size: 2rem;
+    font-weight: normal;
+  }
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
+  }
+}
