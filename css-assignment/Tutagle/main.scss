@@ -97,3 +97,29 @@ header {
     font-size: 1.4rem;
   }
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+}
+
+.nav__first {
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.nav__second {
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+}
