@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin data</title>
+  </head>
+  <body>
+    <h1>Adding food items</h1>
+
+    <fieldset>
+      <legend>Add foods</legend>
+      <!-- Food Name: -->
+      <label for="foods">Choose the food items to add</label>
+
+      <select name="foods" id="fname">
+        <option value="pizza">Pizza</option>
+        <option value="burger">Burgur</option>
+        <option value="sushi">Sushi</option>
+        <option value="chicken">Chicken</option>
+        <option value="crab">Crab</option>
+        <option value="cake">Cake</option>
+        <option value="omlete">omlete</option>
+      </select>
+      <!-- <input type="text" id="fname" /> -->
+      price:
+      <input type="number" id="fprice" />
+
+      <input type="button" id="bttnSubmit" value="Add" />
+    </fieldset>
+
+    <div id="demo"></div>
+
+    <script src="inputData.js"></script>
+  </body>
+</html>
