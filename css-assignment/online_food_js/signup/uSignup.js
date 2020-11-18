@@ -50,7 +50,7 @@ const operation = () => {
 
       if (getuser) {
         alert("added user");
-        location.href = "../login/user_landing.html";
+        location.href = "../login/index.html";
       } else {
         console.log("unable to add user");
       }
